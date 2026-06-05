@@ -22,7 +22,7 @@ function MathHtml({ html, className }) {
   const ref = useRef(null)
   useEffect(() => {
     if (ref.current) renderMathInElement(ref.current, KATEX_OPTS)
-  }, [])
+  }, [html])
   return (
     <div
       ref={ref}
